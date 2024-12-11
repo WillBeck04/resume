@@ -13,6 +13,11 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -21,14 +26,250 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #444;
+      background: #f8f9fa;
+    }
 
-  <!-- =======================================================
-  * Template Name: DevFolio
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    /* Header styling */
+    #header {
+      background: #232323;
+      transition: all 0.5s;
+      z-index: 997;
+      padding: 15px 0;
+    }
+    #header .logo a {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    #header #navbar ul li a {
+      color: #fff !important;
+      font-weight: 500;
+    }
+    #header #navbar ul li a:hover {
+      color: #ddd !important;
+    }
+
+    /* Hero section */
+    #hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #hero .hero-title {
+      font-size: 50px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+    #hero .hero-subtitle {
+      font-size: 24px;
+      color: #eee;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+
+    /* Section titles */
+    .section-title {
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .section-title h3 {
+      font-weight: 700;
+      font-size: 32px;
+      color: #232323;
+    }
+    .line-mf {
+      width: 50px;
+      height: 3px;
+      background: #333;
+      margin: 20px auto 0;
+    }
+
+    /* About section */
+    .about-section .about-img img {
+      border-radius: 8px;
+    }
+    .info-list {
+      list-style: none;
+      padding: 0;
+    }
+    .info-list li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    .info-list li span {
+      font-weight: 600;
+      margin-right: 5px;
+      color: #333;
+    }
+
+    /* Subsection titles */
+    .subsection-title {
+      font-weight: 700;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    /* Experience cards */
+    .experience-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: box-shadow 0.3s;
+    }
+    .experience-card:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .experience-card .company-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #232323;
+    }
+    .experience-card .company-role {
+      font-weight: 600;
+      color: #333;
+      margin: 5px 0;
+    }
+    .experience-card .time-period {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    /* Projects section */
+    .project-box {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: all 0.3s;
+    }
+    .project-box:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .project-box img {
+      width: 100%;
+      height: auto;
+    }
+    .project-box-content {
+      padding: 20px;
+    }
+    .project-box h4 {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #232323;
+    }
+    .project-box p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .visit-link {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      border: 1px solid #333;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .visit-link:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    /* Skills section */
+    .skill-item {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+    .skill-item span {
+      font-weight: 700;
+      color: #333;
+    }
+
+    /* Lists */
+    .leadership-list {
+      list-style: none;
+      padding: 0;
+    }
+    .leadership-list li {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    /* Footer and Contact */
+    #contact {
+      background: url(assets/img/overlay-bg.jpg) no-repeat center center;
+      background-size: cover;
+    }
+    .contact-mf .title-a {
+      color: #fff;
+    }
+    .contact-mf .subtitle-a {
+      color: #eee;
+    }
+    .contact-mf .lead {
+      color: #ccc;
+    }
+    .contact-mf .list-ico li {
+      color: #fff;
+    }
+    .socials ul li a {
+      color: #fff;
+      font-size: 20px;
+      display: inline-block;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    .socials ul li a:hover {
+      color: #ddd;
+    }
+    footer {
+      background: #232323;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer p {
+      color: #eee;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .button.button-a {
+      border:2px solid #fff; 
+      color:#fff; 
+      padding:10px 20px; 
+      border-radius:30px; 
+      text-decoration:none; 
+      transition:0.3s;
+      display: inline-block;
+    }
+
+    .button.button-a:hover {
+      background:#fff;
+      color:#333;
+      text-decoration:none;
+    }
+  </style>
 </head>
 
 <body>
@@ -36,390 +277,268 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html">William Beck</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <h1 class="logo"><a href="#">William Beck</a></h1>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#work">Projects</a></li>
-          
-          
-          
+          <li><a class="nav-link scrollto" href="#about-me">About</a></li>
+          <li><a class="nav-link scrollto" href="#experience">Experience</a></li>
+          <li><a class="nav-link scrollto" href="#projects">Projects</a></li>
+          <li><a class="nav-link scrollto" href="#education">Education</a></li>
+          <li><a class="nav-link scrollto" href="#skills">Skills</a></li>
+          <li><a class="nav-link scrollto" href="#leadership">Leadership</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpg)">
     <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">I am William Beck</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Web Development, Data Analytics, Financial Math, Entrepreneurship, Leadership"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-        </div>
-      </div>
+    <div class="hero-content text-center">
+      <h1 class="hero-title">I am William Beck</h1>
+      <p class="hero-subtitle"><span class="typed" data-typed-items="Web Development, Python, Data Analytics, Financial Math, Entrepreneurship, Leadership"></span></p>
     </div>
   </div><!-- End Hero Section -->
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
+    <!-- ======= About Me Section ======= -->
+    <section id="about-me" class="about-mf sect-pt4 route about-section">
+      <div class="container">
+        <div class="section-title">
+          <h3>About Me</h3>
+          <div class="line-mf"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="about-img">
+              <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="Profile Image">
+            </div>
+            <ul class="info-list mt-4">
+              <li><span>Name:</span>William Beck</li>
+              <li><span>Profile:</span>Student at McGill University</li>
+              <li><span>Email:</span><a href="mailto:william.beck@mail.mcgill.ca" style="color:#333;">william.beck@mail.mcgill.ca</a></li>
+              <li><span>Phone:</span>+1 438 376 4805</li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <p class="lead">
+              My background in Mathematics and Computer Science, combined with a growing interest in creating digital solutions, has sharpened my analytical skills and fostered a keen curiosity about the tech world. Balancing student jobs with academic commitments has enhanced my time management, multitasking abilities, and my capacity to identify and respond to customer needs.
+            </p>
+            <p class="lead">
+              As I aspire towards a career in the tech industry, I am enthusiastic about integrating logical thinking with an entrepreneurial mindset. I am particularly interested in fast-paced, innovative areas such as artificial intelligence, where I can leverage my analytical prowess, adaptability, and creativity to contribute meaningfully and grow professionally.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Me Section -->
+
+    <!-- ======= Experience Section ======= -->
+    <section id="experience" class="experience-section sect-pt4">
+      <div class="container">
+        <div class="section-title">
+          <h3>Experience</h3>
+          <div class="line-mf"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            
+            <div class="experience-card">
+              <div class="company-title">Pratt</div>
+              <div class="company-role">Strategic Planning Team (Data Analytics)</div>
+              <div class="time-period">Ongoing (8 months)</div>
+              <p>
+                Contributed to the strategic planning team by leveraging data analytics. Built and maintained a Power BI dashboard tracking age demands requested by various business units to IT. Enhanced decision-making processes and delivered clear, actionable insights to stakeholders.
+              </p>
+            </div>
+
+            <div class="experience-card">
+              <div class="company-title">L'amour Du Pain</div>
+              <div class="company-role">Sales Associate</div>
+              <div class="time-period">Montreal, QC • 08/2022 - 06/2023</div>
+              <p>
+                Prepared high-quality coffee beverages and assisted customers with product selection. Strengthened customer relationships and improved the buying experience. Managed these responsibilities alongside my studies, honing time-management and multitasking skills.
+              </p>
+            </div>
+
+            <div class="experience-card">
+              <div class="company-title">Sizanani</div>
+              <div class="company-role">Volunteer Tutor (Humanitarian Education Program)</div>
+              <div class="time-period">Johannesburg, South Africa • 09/2021 - 09/2022</div>
+              <p>
+                Tutored a young individual from Alexandra Township in mathematics, contributing to educational empowerment and community development. This experience reinforced my dedication to making a positive impact through knowledge-sharing.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Experience Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <section id="projects" class="projects-section sect-pt4">
+      <div class="container">
+        <div class="section-title">
+          <h3>Projects</h3>
+          <div class="line-mf"></div>
+        </div>
+        <div class="row">
+
+          <!-- CryptoQuest -->
+          <div class="col-md-6">
+            <div class="project-box">
+              <img src="assets/img/arbitrage.jpg" alt="CryptoQuest" class="img-fluid">
+              <div class="project-box-content">
+                <h4>CryptoQuest</h4>
+                <p>
+                  A Python-based platform designed to spot arbitrage opportunities in cryptocurrency markets and simulate virtual trades. This project sharpened my data analysis and algorithmic thinking, turning raw market data into strategic insights.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- VisualFlow Agency -->
+          <div class="col-md-6">
+            <div class="project-box">
+              <img src="assets/img/vf.jpg" alt="VisualFlow Agency" class="img-fluid">
+              <div class="project-box-content">
+                <h4>VisualFlow Agency</h4>
+                <p>
+                  My agency integrates AI-driven data infrastructures into companies to enhance decision-making and streamline digital transformation. 
+                </p>
+                <a class="visit-link" href="https://visualflowagency.com" target="_blank">Visit →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Projects Section -->
+
+    <!-- ======= Education Section ======= -->
+    <section id="education" class="education-section sect-pt4">
+      <div class="container">
+        <div class="section-title">
+          <h3>Education</h3>
+          <div class="line-mf"></div>
+        </div>
+        <p>
+          <strong>McGill University (Expected 2026, Montreal, QC)</strong><br>
+          Bachelor of Science: Mathematics and Computer Science
+        </p>
+        <p>
+          • Member of McGill Entrepreneurship Society<br>
+          • Member of McGill Chess Club
+        </p>
+      </div>
+    </section><!-- End Education Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills-section sect-pt4">
+      <div class="container">
+        <div class="section-title">
+          <h3>Skills</h3>
+          <div class="line-mf"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="skill-item">
+              <span>Programming:</span> Next.js, Python, HTML, CSS, Tailwind CSS, TypeScript, JavaScript
+            </div>
+            <div class="skill-item">
+              <span>Data Analytics:</span> Power BI, Python, Excel, M code, Basic SQL
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="skill-item">
+              <span>Analytical & Strategic Thinking:</span> Problem-solving, logical reasoning, and long-term planning
+            </div>
+            <div class="skill-item">
+              <span>Time Management & Multitasking:</span> Balancing academic and professional commitments effectively
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="skill-item">
+              <span>Entrepreneurship & Leadership:</span> Founding initiatives, guiding teams, achieving goals
+            </div>
+            <div class="skill-item">
+              <span>Customer Service & Communication:</span> Enhancing user experiences, building strong relationships
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Leadership Section ======= -->
+    <section id="leadership" class="leadership-section sect-pt4">
+      <div class="container">
+        <div class="section-title">
+          <h3>Leadership</h3>
+          <div class="line-mf"></div>
+        </div>
+        <ul class="leadership-list">
+          <li><strong>Math Olympiads (2021):</strong> Selected for France's Math Olympiads based on top math grades. Led a team through complex problem-solving tasks, demonstrating strategic thinking, coordination, and effective guidance under pressure.</li>
+        </ul>
+      </div>
+    </section><!-- End Leadership Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route">
+      <div class="overlay-mf" style="background: rgba(0,0,0,0.6);"></div>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
+            <div class="contact-mf">
+              <div class="box-shadow-full" style="background: rgba(255,255,255,0.1); padding:40px; border-radius:8px;">
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <div class="title-box">
+                      <h5 class="title-a" style="color:#fff;">Interested in my profile?</h5>
+                      <p class="subtitle-a" style="color:#eee;">I'm seeking a 2024 summer internship. Let's connect!</p>
+                      <div class="line-mf" style="background:#fff;"></div>
                     </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>William Beck</span></p>
-                        <p><span class="title-s">Profile: </span> <span>Student at Mcgill University</span></p>
-                        <p><span class="title-s">Email: </span> <span>william.beck@mail.mcgill.ca</span></p>
-                        <p><span class="title-s">Phone: </span> <span>+1 438 376 4805</span></p>
-                      </div>
+                    <div class="more-info text-center">
+                      <p class="lead" style="color:#ccc;">
+                        Feel free to reach out via email or phone, or connect with me on LinkedIn.
+                      </p>
+                      <ul class="list-ico" style="list-style:none; padding:0;">
+                        <li><span class="bi bi-phone" style="color:#fff;"></span> +1 438 376 4805</li>
+                        <li><a href="mailto:william.beck@mail.mcgill.ca" style="color:#fff;"><span class="bi bi-envelope"></span> william.beck@mail.mcgill.ca</a></li>
+                      </ul>
                     </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>Web Development</span> <span class="pull-right">92%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="socials text-center mt-3">
+                      <ul style="list-style:none; padding:0;">
+                        <li style="display:inline;"><a href="https://www.linkedin.com/in/william-beck-339800245/" target="_blank"><span class="ico-circle" style="color:#fff;"><i class="bi bi-linkedin"></i></span></a></li>
+                      </ul>
                     </div>
-                    <span>Analytical Skills</span> <span class="pull-right">95%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>Python</span> <span class="pull-right">94%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>Strategic Thinking and Planning</span> <span class="pull-right">97%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-md-12 text-center mt-4">
+                      <a href="mailto:william.beck@mail.mcgill.ca" class="button button-a button-big button-rouded">Email Me</a>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
-                     
-                      I'm a McGill University student blending Mathematics and Computer Science with a passion for coding and finance. My diverse projects, like VisualFlow and CryptoQuest, highlight my ability to innovate and apply coding skills across different contexts, from data visualization to fintech.
-
-
-                    </p>
-                    <p class="lead">
-                      Driven by curiosity, I enjoy exploring new technologies and finding creative solutions to complex problems. This hands-on approach has not only sharpened my technical skills but also broadened my understanding of the tech and finance sectors.
-                    </p>
-                    <p class="lead">
-                      As I explore internship opportunities, I bring a versatile skill set, a portfolio of impactful projects, and a keen interest in contributing to dynamic, interdisciplinary teams. My goal is to leverage my coding expertise and financial insights to make meaningful contributions to any project I undertake.
-                    </p>
-                  </div>
-                </div>
+                </div><!-- End row -->
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Services Section ======= -->
-<section id="services" class="services-mf pt-5 route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">Skills</h3>
-          <p class="subtitle-a">
-            Leveraging my academic and project experiences to offer versatile skills.
-          </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="bi bi-code-slash"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Programming</h2>
-            <p class="s-description text-center">
-              Proficient in Next.js, Java, Python, and C, with a strong emphasis on front-end development and problem-solving.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="bi bi-graph-up"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Analytical Skills</h2>
-            <p class="s-description text-center">
-              Ability to dissect complex problems and derive insightful solutions through data analysis and logical reasoning.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="bi bi-lightbulb"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Strategic Planning</h2>
-            <p class="s-description text-center">
-              Expertise in devising strategic plans and frameworks to achieve long-term goals and project milestones.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="bi bi-clock-history"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Time Management</h2>
-            <p class="s-description text-center">
-              Skilled in managing multiple tasks efficiently, prioritizing deadlines and maintaining high productivity levels.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="bi bi-people"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Leadership</h2>
-            <p class="s-description text-center">
-              Demonstrated leadership through collaborative projects and guiding teams towards achieving common objectives.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-box">
-          <div class="service-ico">
-            <span class="ico-circle"><i class="bi bi-chat-dots"></i></span>
-          </div>
-          <div class="service-content">
-            <h2 class="s-title">Communication</h2>
-            <p class="s-description text-center">
-              Strong communication and relationship-building skills, essential for teamwork and effective stakeholder engagement.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- End Services Section -->
-
-
-   
-
-  <!-- ======= Portfolio Section ======= -->
-<section id="work" class="portfolio-mf sect-pt4 route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">Portfolio</h3>
-          <p class="subtitle-a">Showcasing a blend of innovation and expertise in web development and data visualization.</p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- Project boxes style -->
-      <style>
-        .work-box {
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-        }
-        .work-content {
-          margin-top: auto;
-        }
-      </style>
-
-      <!-- CryptoQuest -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="work-box">
-          <a href="https://beck-crypto.vercel.app/" target="_blank">
-            <div class="work-img">
-              <img src="assets/img/cryptoquest.jpg" alt="CryptoQuest" class="img-fluid">
-            </div>
-          </a>
-          <div class="work-content">
-            <div class="row">
-              <div class="col-sm-8">
-                <h2 class="w-title">CryptoQuest</h2>
-                <div class="w-more">
-                  <span class="w-ctegory">Cryptocurrency Tracking and Virtual Investment Platform</span>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="w-like">
-                  <a href="https://beck-crypto.vercel.app/"> <span class="bi bi-plus-circle"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VisualFlow Agency -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="work-box">
-          <a href="http://visualflowagency.com" target="_blank">
-            <div class="work-img">
-              <img src="assets/img/visualflowagency.jpg" alt="VisualFlow Agency" class="img-fluid">
-            </div>
-          </a>
-          <div class="work-content">
-            <div class="row">
-              <div class="col-sm-8">
-                <h2 class="w-title">VisualFlow Agency</h2>
-                <div class="w-more">
-                  <span class="w-ctegory">Web Design and SEO for Local Businesses</span>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="w-like">
-                  <a href="http://visualflowagency.com"> <span class="bi bi-plus-circle"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VisualFlow Data Visualization -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="work-box">
-          <a href="https://visual-flow-affi-switch-demo.vercel.app/" target="_blank">
-            <div class="work-img">
-              <img src="assets/img/visualflow.jpg" alt="VisualFlow Data Visualization" class="img-fluid">
-            </div>
-          </a>
-          <div class="work-content">
-            <div class="row">
-              <div class="col-sm-8">
-                <h2 class="w-title">VisualFlow Data Visualization</h2>
-                <div class="w-more">
-                  <span class="w-ctegory">Next.js-based Web Application (In Development)</span>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="w-like">
-                  <a href="https://visual-flow-affi-switch-demo.vercel.app/"> <span class="bi bi-plus-circle"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section><!-- End Portfolio Section -->
-
-
-
-   
-
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
-  <div class="overlay-mf"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="contact-mf">
-          <div id="contact" class="box-shadow-full">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="title-box text-center">
-                  <h5 class="title-a">
-                    Interested in my profile?
-                  </h5>
-                  <p class="subtitle-a">
-                    I'm looking for a 2024 summer internship. Let's connect!
-                  </p>
-                  <div class="line-mf"></div>
-                </div>
-                <div class="more-info text-center">
-                  <p class="lead">
-                    Feel free to reach out to me via email or phone, or connect with me on LinkedIn.
-                  </p>
-                  <ul class="list-ico">
-                    <li><span class="bi bi-phone"></span> +1 438 376 4805</li>
-                    <li><a href="mailto:william.beck@mail.mcgill.ca"><span class="bi bi-envelope"></span> william.beck@mail.mcgill.ca</a></li>
-                  </ul>
-                </div>
-                <div class="socials text-center">
-                  <ul>
-                    <li><a href="https://www.linkedin.com/in/william-beck-339800245/" target="_blank"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                  </ul>
-                </div>
-                <div class="col-md-12 text-center mt-4">
-                  <a href="mailto:william.beck@mail.mcgill.ca" class="button button-a button-big button-rouded">Email Me</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- End Contact Section -->
-
+        </div><!-- End row -->
+      </div><!-- End container -->
+    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>William Beck</strong>. All Rights Reserved</p>
-            
-          </div>
-        </div>
-      </div>
+      <p>&copy; Copyright <strong>William Beck</strong>. All Rights Reserved</p>
     </div>
   </footer><!-- End  Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center"
+    style="background:#333; color:#fff; border-radius:50%; width:40px; height:40px; text-decoration:none; transition:0.3s;"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -431,7 +550,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
